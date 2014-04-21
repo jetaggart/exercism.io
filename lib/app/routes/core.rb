@@ -1,8 +1,10 @@
 module ExercismWeb
   module Routes
     class Core < Sinatra::Application
+      APP_ROOT = File.expand_path(File.join(__FILE__, '..', '..'))
+
       configure do
-        set :root, ['.', 'lib', 'app'].join('/')
+        set :root, APP_ROOT
         set :environment, ENV.fetch('RACK_ENV') { :development }.to_sym
         set :method_override, true
       end

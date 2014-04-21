@@ -10,6 +10,6 @@ class StaticPageTest < AcceptanceTestCase
   def test_about_exists
     visit '/about'
 
-    assert page.has_content?('About Exercism')
+    assert page.has_content?('About exercism.io')
   end
 end
